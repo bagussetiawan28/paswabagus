@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body style="background-image:url('https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900&t=st=1667835419~exp=1667836019~hmac=00d46b679448e2420c7b19d47fa475b3cb2180e21f19bf3bbe7c046f584086c1');">
 
     <div class="container">
 
@@ -34,11 +34,14 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="gambar/stikom.jpg"
+                            <div class="col-lg-6 d-none d-lg-block">
+                            <img src="gambar/stikom.jpg" alt="Image" style="width:500px;height:600px;">
+                            </div>
+                            <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">PASWA 2022</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Database Paswa <sub>2022</sub>
+                                    </h1>
                                     </div>
                                     <?php
                                     include("connection.php");
@@ -53,7 +56,7 @@
                                 </script>";
                                         } else {
                                             $result = mysqli_query($mysqli, "SELECT * FROM tab_user 
-                                WHERE username='$user' AND password=md5('$pass')")
+                                WHERE username='$user' AND password='$pass'")
                                                 or die("Instruksi tidak ditemukan");
                                             $row = mysqli_fetch_assoc($result);
 
@@ -93,12 +96,11 @@
                                             <hr>
                                         </form>
                                     <?php } ?>
-                                    <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <a class="small" href="forgot-password.php">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="register.php">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
